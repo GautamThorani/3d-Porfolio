@@ -26,7 +26,10 @@ import {
   fastapi,
   DA,
   OT,
-  AQ
+  AQ,
+  github,
+  greencart,
+  agency
 } from "../assets";
 
 export const navLinks = [
@@ -120,83 +123,84 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
+    title: "Software Engineer",
     company_name: "Outlier ai",
     icon: OT,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2023 - Oct 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Worked on coding projects supporting AI model training and evaluation.",
+      "Developed and optimized solutions in JavaScript and Python.",
+      "Implemented efficient algorithms and scripts to meet task requirements.",
+      "Delivered high-quality code under strict accuracy and performance standards.",
+
     ],
   },
   {
-    title: "React Native Developer",
+    title: "Software Engineer",
     company_name: "Data Annotation",
     icon: DA,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "March 2024 - Jan 2025",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Wrote code to improve AI model accuracy and output quality.",
+      "Developed logic and scripts in JavaScript and Python for model training and refinement.",
+      "Optimized solutions to make AI responses more precise and reliable.",
+      "Delivered high-quality work independently, meeting strict performance standards.",
     ],
   },
   {
-    title: "Web Developer",
+    title: "Software Engineer - Bash",
     company_name: "AfterQuery Experts (YC 25)",
     icon: AQ,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "August 2025 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Design and develop advanced terminal-based engineering tasks to train and benchmark AI models.",
+      "Create complex troubleshooting scenarios involving DevOps, infra-repair, and real-world debugging workflows.",
+      "Write and validate high-quality test suites and solutions using Docker, Bash, Python, and related tooling.",
+      "Ensure strict technical and quality compliance, including reproducibility, determinism, and agent evaluation standards.",
     ],
   },
-  // {
-  //   title: "Full stack Developer",
-  //   company_name: "Meta",
-  //   icon: meta,
-  //   iconBg: "#E6DEDD",
-  //   date: "Jan 2023 - Present",
-  //   points: [
-  //     "Developing and maintaining web applications using React.js and other related technologies.",
-  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-  //     "Implementing responsive design and ensuring cross-browser compatibility.",
-  //     "Participating in code reviews and providing constructive feedback to other developers.",
-  //   ],
-  // },
+  {
+    title: "Software Enginee",
+    company_name: "GitHub",
+    icon: github,
+    iconBg: "#E6DEDD",
+    date: "Aug 2025 - Present",
+    points: [
+      "Contributed to the open-source project cloud-init, focusing on improving its test suite.",
+      "Migrated legacy unit tests to pytest, enhancing readability and maintainability.",
+      "Submitted and merged 2 pull requests through GitHub.",
+      "Followed open-source best practices, including code reviews and CI validation.",
+    ],
+  },
 ];
 
 const testimonials = [
   {
     testimonial:
       "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    name: "Abhishek",
+    designation: "Front-end Engineer",
+    company: "AI Factor",
+    // image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    name: "Shuita",
+    designation: "Software Engineer",
+    company: "UBL Bank",
+    // image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     testimonial:
       "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    name: "Vishaka",
+    designation: "RPA Developer",
+    company: "Arcana",
+    // image: "https://randomuser.me/api/portraits/women/6.jpg",
   },
 ];
 
@@ -219,8 +223,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: greencart,
+    source_code_link: "https://green-cart-9164.vercel.app/",
   },
   {
     name: "Job IT",
@@ -240,8 +244,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: agency,
+    source_code_link: "https://agency-hazel.vercel.app/",
   },
   {
     name: "Trip Guide",

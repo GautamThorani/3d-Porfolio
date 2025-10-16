@@ -6,6 +6,8 @@ import web from "./web.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import greencart from "./greencart.png";
+import agency from "./agency.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -21,6 +23,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import fastapi from "./tech/Fastapi.png";
+
 
 
 import meta from "./company/meta.png";
@@ -67,5 +70,7 @@ export {
   fastapi,
   DA,
   OT,
-  AQ
+  AQ,
+  greencart,
+  agency
 };

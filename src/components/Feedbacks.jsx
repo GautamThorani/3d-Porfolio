@@ -12,7 +12,7 @@ const FeedbackCard = ({
   name,
   designation,
   company,
-  image,
+  // image,
 }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
@@ -29,14 +29,14 @@ const FeedbackCard = ({
             <span className='blue-text-gradient'>@</span> {name}
           </p>
           <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
+            {designation} @  {company}
           </p>
         </div>
 
         <img
-          src={image}
+          // src={image}
           alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
+          className='w-10 h-10 hidden rounded-full object-cover'
         />
       </div>
     </div>
