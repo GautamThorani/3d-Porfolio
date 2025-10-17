@@ -180,7 +180,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+      "You have a rare talent for owning a product from concept to execution. The way you bring together complex systems and intuitive design is remarkable.",
     name: "Abhishek",
     designation: "Front-end Engineer",
     company: "AI Factor",
@@ -188,7 +188,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+      "You have a knack for building the complex logic that makes an application tick. The performance and reliability of your work are outstanding.",
     name: "Shuita",
     designation: "Software Engineer",
     company: "UBL Bank",
@@ -196,7 +196,7 @@ const testimonials = [
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+      "Working with you is a genuine pleasure. You bring a positive energy that elevates the whole team while consistently delivering outstanding work.",
     name: "Vishaka",
     designation: "RPA Developer",
     company: "Arcana",
@@ -206,63 +206,100 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Green Cart",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search, browse, and purchase groceries from a digital storefront, providing a convenient and efficient solution for daily shopping needs.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
-        color: "green-text-gradient",
+        name: "node.js",
+        color: "yellow-text-gradient",
       },
       {
+        name: "express.js",
+        color: "text-gray-600",
+      },  
+      {
         name: "tailwind",
+        color: "teal-text-gradient",
+      },
+      {
+        name: "stripe",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "cloudinary",
         color: "pink-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
       },
     ],
     image: greencart,
     source_code_link: "https://green-cart-9164.vercel.app/",
   },
   {
-    name: "Job IT",
+    name: "Agency AI",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Visually compelling and responsive frontend website for a marketing agency, designed to showcase services, client portfolios, and drive lead generation through an optimized user experience.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: "tailwind",
+        color: "teal-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "motion",
+        color: "motion-text-gradient",
       },
+      {
+        name: "restapi",
+        color: "rest-text-gradient",
+      },
+      {
+        name: "responsive",
+        color: "rest-text-gradient",
+      },
+
     ],
     image: agency,
     source_code_link: "https://agency-hazel.vercel.app/",
   },
   {
-    name: "Trip Guide",
+    name: "AuthShield",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A full-stack security platform designed to strengthen account protection through Multi-Factor Authentication (MFA), allowing users to securely manage their authentication settings and access.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "fastapi",
         color: "green-text-gradient",
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "typescript",
+        color: "teal-text-gradient",
+      },
+      {
+        name: "docker",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "postgreSQL",
+        color: "teal-text-gradient",
+      },
+      {
+        name: "material ui",
+        color: "purple-text-gradient",
       },
     ],
     image: tripguide,

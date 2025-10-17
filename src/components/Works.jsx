@@ -1,6 +1,7 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext"; // Add this import
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -15,6 +16,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  isDarkMode // Add this prop
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -24,7 +26,9 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className={`p-5 rounded-2xl sm:w-[360px] w-full ${
+          isDarkMode ? 'bg-tertiary' : 'bg-gray-100 shadow-lg'
+        }`}
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -36,7 +40,9 @@ const ProjectCard = ({
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className={`w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ${
+                isDarkMode ? 'black-gradient' : 'bg-gray-800'
+              }`}
             >
               <img
                 src={github}
@@ -48,8 +54,16 @@ const ProjectCard = ({
         </div>
 
         <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <h3 className={`font-bold text-[24px] ${
+            isDarkMode ? 'text-white' : 'text-gray-900'
+          }`}>
+            {name}
+          </h3>
+          <p className={`mt-2 text-[14px] ${
+            isDarkMode ? 'text-secondary' : 'text-gray-600'
+          }`}>
+            {description}
+          </p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -68,17 +82,29 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const { isDarkMode } = useTheme(); // Add this
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        <p className={`${styles.sectionSubText} ${
+          isDarkMode ? '' : '!text-gray-600'
+        }`}>
+          My work
+        </p>
+        <h2 className={`${styles.sectionHeadText} ${
+          isDarkMode ? '' : '!text-gray-900'
+        }`}>
+          Projects.
+        </h2>
       </motion.div>
 
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className={`mt-3 text-[17px] max-w-3xl leading-[30px] ${
+            isDarkMode ? 'text-secondary' : 'text-gray-600'
+          }`}
         >
           Following projects showcases my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -90,7 +116,12 @@ const Works = () => {
 
       <div className='mt-20 flex flex-wrap gap-7'>
         {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+          <ProjectCard 
+            key={`project-${index}`} 
+            index={index} 
+            {...project} 
+            isDarkMode={isDarkMode} // Pass isDarkMode prop
+          />
         ))}
       </div>
     </>

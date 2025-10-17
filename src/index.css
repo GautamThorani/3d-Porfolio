@@ -10,7 +10,20 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
+  /* Remove color-scheme: dark; */
+}
+
+/* Theme variables */
+:root {
+  --color-primary: #050816;
+  --color-secondary: #aaa6c3;
+  --color-tertiary: #151030;
+}
+
+.light {
+  --color-primary: #ffffff;
+  --color-secondary: #6b7280;
+  --color-tertiary: #f9fafb;
 }
 
 .hash-span {
@@ -20,27 +33,22 @@
 }
 
 .black-gradient {
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343, #000000);
+  background: linear-gradient(to right, #434343, #000000);
 }
 
 .violet-gradient {
   background: #804dee;
   background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    #804dee 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
+  background: -webkit-linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+}
+
+/* Light mode gradient */
+.violet-gradient-light {
+  background: #7C3AED;
+  background: linear-gradient(-90deg, #7C3AED 0%, rgba(124, 58, 237, 0.3) 100%);
+  background: -webkit-linear-gradient(-90deg, #7C3AED 0%, rgba(124, 58, 237, 0.3) 100%);
 }
 
 .green-pink-gradient {
@@ -50,68 +58,129 @@
 }
 
 .orange-text-gradient {
-  background: #f12711; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #f12711,
-    #f5af19
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f12711;
+  background: -webkit-linear-gradient(to top, #f12711, #f5af19);
+  background: linear-gradient(to top, #f12711, #f5af19);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .green-text-gradient {
-  background: #11998e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #11998e,
-    #38ef7d
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #11998e,
-    #38ef7d
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #11998e;
+  background: -webkit-linear-gradient(to top, #11998e, #38ef7d);
+  background: linear-gradient(to top, #11998e, #38ef7d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .blue-text-gradient {
-  /* background: -webkit-linear-gradient(#eee, #333); */
-  background: #56ccf2; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #2f80ed,
-    #56ccf2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #56ccf2;
+  background: -webkit-linear-gradient(to top, #2f80ed, #56ccf2);
+  background: linear-gradient(to top, #2f80ed, #56ccf2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.yellow-text-gradient {
+  background: #ade037;
+  background: -webkit-linear-gradient(to top, #ade037, #a4be25);
+  background: linear-gradient(to top, #ade037, #a4be25);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.purple-text-gradient {
+  background: 	#5167FC;
+  background: -webkit-linear-gradient(to top, 	#5167FC, 	#7b85c9);
+  background: linear-gradient(to top, 	#5167FC, #7b85c9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .pink-text-gradient {
-  background: #ec008c; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to top,
-    #ec008c,
-    #fc6767
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #ec008c,
-    #fc6767
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ec008c;
+  background: -webkit-linear-gradient(to top, #ec008c, #fc6767);
+  background: linear-gradient(to top, #ec008c, #fc6767);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.teal-text-gradient {
+  background: #06B6D4;
+  background: -webkit-linear-gradient(to top, #06B6D4, #6ed0e1);
+  background: linear-gradient(to top, #06B6D4, #6ed0e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.motion-text-gradient {
+  background: #FFF312;
+  background: -webkit-linear-gradient(to top, #FFF312 , #67620a);
+  background: linear-gradient(to top, #FFF312, #67620a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rest-text-gradient {
+  background: #2980b9;
+  background: -webkit-linear-gradient(to top, #2980b9, #78a1bd);
+  background: linear-gradient(to top, #2980b9, #78a1bd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent  ;
+}
+
+
+/* Hero text styles */
+.hero-head-text {
+  @apply font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2;
+}
+
+.hero-sub-text {
+  @apply font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px];
+}
+
+/* Dark mode styles */
+.dark .hero-head-text {
+  color: #ffffff;
+}
+
+.dark .hero-sub-text {
+  color: #dfd9ff;
+}
+
+/* Light mode styles */
+.light .hero-head-text {
+  color: #1f2937; /* gray-900 */
+}
+
+.light .hero-sub-text {
+  color: #4b5563; /* gray-600 */
+}
+.blue-gradient-light {
+  background: #2563eb;
+  background: linear-gradient(-90deg, #2563eb 0%, rgba(37, 99, 235, 0.3) 100%);
+  background: -webkit-linear-gradient(-90deg, #2563eb 0%, rgba(37, 99, 235, 0.3) 100%);
+}
+/* Override styles for light mode */
+.light .sectionHeadText {
+  color: #1f2937 !important; /* gray-900 */
+}
+
+.light .sectionSubText {
+  color: #4b5563 !important; /* gray-600 */
+}
+/* Vertical Timeline Dark Mode */
+.vertical-timeline-dark::before {
+  background: #ffffff !important; /* White line for dark mode */
+}
+
+/* Vertical Timeline Light Mode */
+.vertical-timeline-light::before {
+  background: #d1d5db !important; /* Gray-300 line for light mode */
+}
+
+/* Optional: Style the date text for better visibility */
+.vertical-timeline-light .vertical-timeline-element-date {
+  color: #6b7280 !important; /* Gray-500 for light mode */
+}
+
+.vertical-timeline-dark .vertical-timeline-element-date {
+  color: #ffffff !important; /* White for dark mode */
 }
 
 /* canvas- styles */

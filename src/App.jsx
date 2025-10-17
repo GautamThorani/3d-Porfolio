@@ -1,15 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
-
+import { useTheme } from "./context/ThemeContext"; // Add this import
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 
 const App = () => {
+  const { isDarkMode } = useTheme(); // Get the theme state
+
   return (
     <BrowserRouter>
-      <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
-          <Navbar />
-          <Hero />
-        </div>
+      {/* This div wraps the ENTIRE website and changes background based on theme */}
+      <div className={`relative z-0 transition-colors duration-300 ${
+        isDarkMode ? 'bg-primary' : 'bg-white'
+      }`}>
+        <Navbar />
+        <Hero />
         <About />
         <Experience />
         <Tech />

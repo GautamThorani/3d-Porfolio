@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
+  darkMode: 'class', // Add this line
   theme: {
     extend: {
       colors: {
@@ -11,6 +12,10 @@ module.exports = {
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        // Light mode colors
+        "light-primary": "#ffffff",
+        "light-secondary": "#4b5563",
+        "light-tertiary": "#f3f4f6",
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
