@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useTheme } from "../context/ThemeContext"; // Add this import
+import { useTheme } from "../context/ThemeContext"; 
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -15,7 +15,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const { isDarkMode } = useTheme(); // Add this
+  const { isDarkMode } = useTheme(); 
 
   const [loading, setLoading] = useState(false);
 

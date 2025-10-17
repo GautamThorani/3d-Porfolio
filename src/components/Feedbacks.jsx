@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { useTheme } from "../context/ThemeContext"; // Add this import
+import { useTheme } from "../context/ThemeContext";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
@@ -58,7 +58,7 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
-  const { isDarkMode } = useTheme(); // Add this
+  const { isDarkMode } = useTheme()
 
   return (
     <div className={`mt-12 rounded-[20px] ${
@@ -88,7 +88,7 @@ const Feedbacks = () => {
             key={testimonial.name} 
             index={index} 
             {...testimonial} 
-            isDarkMode={isDarkMode} // Pass isDarkMode prop
+            isDarkMode={isDarkMode} 
           />
         ))}
       </div>

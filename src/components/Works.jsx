@@ -1,7 +1,6 @@
-import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-import { useTheme } from "../context/ThemeContext"; // Add this import
+import { useTheme } from "../context/ThemeContext"; 
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -16,7 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
-  isDarkMode // Add this prop
+  isDarkMode 
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -82,7 +81,7 @@ const ProjectCard = ({
 };
 
 const Works = () => {
-  const { isDarkMode } = useTheme(); // Add this
+  const { isDarkMode } = useTheme(); 
 
   return (
     <>
@@ -120,7 +119,7 @@ const Works = () => {
             key={`project-${index}`} 
             index={index} 
             {...project} 
-            isDarkMode={isDarkMode} // Pass isDarkMode prop
+            isDarkMode={isDarkMode} 
           />
         ))}
       </div>

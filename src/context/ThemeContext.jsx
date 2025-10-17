@@ -11,16 +11,22 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
     if (savedTheme) {
       setIsDarkMode(savedTheme === 'dark');
+    } else {
+      setIsDarkMode(systemPrefersDark);
     }
   }, []);
 
   useEffect(() => {
+    if (isDarkMode === null) return; 
+    
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     
     if (isDarkMode) {
